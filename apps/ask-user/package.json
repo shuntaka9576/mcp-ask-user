@@ -1,6 +1,6 @@
 {
   "name": "mcp-ask-user",
-  "version": "0.0.0-semantically-released",
+  "version": "1.0.0",
   "description": "MCP App for asking users questions with interactive form UI",
   "keywords": [
     "ai",
@@ -11,7 +11,7 @@
   ],
   "license": "MIT",
   "bin": {
-    "mcp-ask-user": "./dist/server.mjs"
+    "mcp-ask-user": "dist/server.mjs"
   },
   "files": [
     "dist",
@@ -32,7 +32,9 @@
     "release": "semantic-release"
   },
   "release": {
-    "branches": ["main"]
+    "branches": [
+      "main"
+    ]
   },
   "publishConfig": {
     "access": "public",
