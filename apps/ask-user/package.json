@@ -1,0 +1,46 @@
+{
+  "name": "mcp-ask-user",
+  "version": "0.0.0",
+  "description": "MCP App for asking users questions with interactive form UI",
+  "keywords": [
+    "ai",
+    "claude",
+    "form",
+    "interactive",
+    "mcp"
+  ],
+  "license": "MIT",
+  "bin": {
+    "mcp-ask-user": "./dist/server.mjs"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "main": "./dist/server.mjs",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "build:ui": "INPUT=mcp-app.html vite build",
+    "build:server": "tsdown src/server.ts --format esm --out-dir dist --clean false",
+    "build": "npm run build:ui && npm run build:server",
+    "serve": "node dist/server.mjs",
+    "serve:stdio": "node dist/server.mjs --stdio",
+    "dev": "tsx server.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/ext-apps": "^1.0.1",
+    "@modelcontextprotocol/sdk": "^1.25.3",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "tsdown": "0.20.1",
+    "vite": "^7.3.1",
+    "vite-plugin-singlefile": "^2.3.0"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

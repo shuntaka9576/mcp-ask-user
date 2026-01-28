@@ -1,0 +1,11 @@
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      glob: "*.{ts,tsx,js,jsx}"
+      run: bunx oxlint {staged_files}
+    format:
+      glob: "*.{ts,tsx,js,jsx,json,css,html}"
+      run: bunx oxfmt --write {staged_files} && git add {staged_files}
+    spell-check:
+      run: bunx cspell --no-progress {staged_files}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en",
+  "dictionaries": ["typescript"],
+  "dictionaryDefinitions": [
+    {
+      "name": "typescript",
+      "path": "./node_modules/@cspell/dict-typescript/dict/typescript.txt"
+    }
+  ],
+  "words": [
+    "apig",
+    "bunfig",
+    "bunx",
+    "hono",
+    "lefthook",
+    "mcp",
+    "modelcontextprotocol",
+    "monorepo",
+    "onhostcontextchanged",
+    "onsessioninitialized",
+    "onteardown",
+    "ontoolinput",
+    "ontoolresult",
+    "oxfmt",
+    "oxfmtignore",
+    "oxlint",
+    "shuntaka",
+    "singlefile",
+    "streamable",
+    "workspaces"
+  ],
+  "ignorePaths": [
+    "node_modules",
+    "dist",
+    ".turbo",
+    "cdk.out",
+    "bun.lock",
+    "package-lock.json"
+  ]
+}

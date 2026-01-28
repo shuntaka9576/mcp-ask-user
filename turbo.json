@@ -1,0 +1,42 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "//#lint:fmt": {
+      "dependsOn": [],
+      "cache": true
+    },
+    "//#lint:oxlint": {
+      "dependsOn": [],
+      "cache": true
+    },
+    "//#spell-check": {
+      "dependsOn": [],
+      "cache": true
+    },
+    "type-check": {
+      "dependsOn": [],
+      "cache": true
+    },
+    "lint": {
+      "dependsOn": [
+        "//#lint:fmt",
+        "//#lint:oxlint",
+        "//#spell-check",
+        "type-check"
+      ],
+      "cache": false
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "test": {
+      "dependsOn": ["build"],
+      "outputs": []
+    },
+    "deploy": {
+      "dependsOn": ["build"],
+      "outputs": []
+    }
+  }
+}
