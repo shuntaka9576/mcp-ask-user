@@ -1,6 +1,6 @@
 {
   "name": "mcp-ask-user",
-  "version": "0.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "MCP App for asking users questions with interactive form UI",
   "keywords": [
     "ai",
@@ -28,7 +28,15 @@
     "serve": "node dist/server.mjs",
     "serve:stdio": "node dist/server.mjs --stdio",
     "dev": "tsx server.ts",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "release": "semantic-release"
+  },
+  "release": {
+    "branches": ["main"]
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   },
   "dependencies": {
     "@modelcontextprotocol/ext-apps": "^1.0.1",
@@ -36,6 +44,7 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "semantic-release": "25.0.2",
     "tsdown": "0.20.1",
     "vite": "^7.3.1",
     "vite-plugin-singlefile": "^2.3.0"
