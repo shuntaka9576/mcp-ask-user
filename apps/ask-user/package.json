@@ -1,6 +1,6 @@
 {
   "name": "mcp-ask-user",
-  "version": "1.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "MCP App for asking users questions with interactive form UI",
   "keywords": [
     "ai",
